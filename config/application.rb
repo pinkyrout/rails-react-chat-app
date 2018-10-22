@@ -13,7 +13,7 @@ module ReactChatApp
 
     config.middleware.insert_before Rack::Runtime, Rack::Cors do
       allow do
-        origins 'http://localhost','http://localhost:3000'
+        origins '*'
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
